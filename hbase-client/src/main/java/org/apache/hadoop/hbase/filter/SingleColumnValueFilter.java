@@ -170,6 +170,14 @@ public class SingleColumnValueFilter extends FilterBase {
 
   @Override
   public ReturnCode filterKeyValue(Cell c) {
+//      KeyValue keyValue = KeyValueUtil.ensureKeyValue(c);
+//      if (filterColumnValue(keyValue.getBuffer(),
+//              keyValue.getValueOffset(), keyValue.getValueLength())) {
+//          return this.latestVersionOnly? NEXT_ROW: SKIP;
+//
+//      }
+//      return INCLUDE;
+
     // System.out.println("REMOVE KEY=" + keyValue.toString() + ", value=" + Bytes.toString(keyValue.getValue()));
     if (this.matchedColumn) {
       // We already found and matched the single column, all keys now pass
